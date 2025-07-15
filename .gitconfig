@@ -1,0 +1,21 @@
+[user]
+  email = ahn.jeff@gmail.com
+  name = Jeff Ahn
+
+[core]
+  autocrlf = input
+  whitespace = cr-at-eol
+  editor = vim
+
+[alias]
+  lg = log --color --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  ll = log --color --oneline --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+  st = status
+  cm = commit -m
+  ci = commit
+  aa = add --all
+  co = checkout
+  br = branch
+  amend = commit --amend --no-edit
+  dnn = diff --name-only
