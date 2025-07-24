@@ -69,5 +69,3 @@ nnoremap <C-b> :ls<CR>:b<Space>
 " hotkey for save, clear terminal, compile and run
 map <F5> <Esc>:w<CR>:!clear<CR>:!g++ -O2 -DLOCAL -Wall -Wno-sign-compare -Wno-unused-result -std=c++11 -static % -o %:r<CR>:!./%:r<CR>
 
-
-call plug#end()
