@@ -69,41 +69,5 @@ nnoremap <C-b> :ls<CR>:b<Space>
 " hotkey for save, clear terminal, compile and run
 map <F5> <Esc>:w<CR>:!clear<CR>:!g++ -O2 -DLOCAL -Wall -Wno-sign-compare -Wno-unused-result -std=c++11 -static % -o %:r<CR>:!./%:r<CR>
 
-" NERDTree Toggle
-nmap <leader>f :NERDTreeToggle %<CR>
-
-" vim-plug install command via curl:
-" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-"   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-call plug#begin('~/.vim/plugged')
-
-" Vimtex: LaTeX Plugin for Vim
-Plug 'lervag/vimtex'
-let g:tex_flavor='latex'
-
-" Default PDF viewer
-let g:vimtex_view_method='general'
-let g:vimtex_quickfix_open_on_warning = 1
-set conceallevel=1
-let g:tex_conceal='abdmg'
-
-" NerdTree: File Manager Plugin
-Plug 'scrooloose/nerdtree'
-
-" YouCompleteMe: Autocomplete Plugin
-Plug 'valloric/youcompleteme', { 'do': './install.py' }
-
-" UltiSnips: Snippet Insertion Plugin
-Plug 'SirVer/ultisnips'
-
-" Trigger configuration. Do not use <tab> YouCompleteMe.
-let g:UltiSnipsExpandTrigger='<c-j>'
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit='vertical'
-
-" disable split window preview from auto complete
-set completeopt-=preview
 
 call plug#end()
